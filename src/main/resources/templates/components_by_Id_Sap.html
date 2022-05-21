@@ -3,39 +3,26 @@
 <head>
     <meta charset ="UTF-8" >
     <title>LIST Components</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+  <!--  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">-->
 </head>
 
 <body>
 <!-- TERAZ JEST POPRAWNA JEZELI CHODZI O TABELE DLA COMPONENTÓW DLA DOSTAWCY -->
-<link rel="stylesheet" href="../static/style.css" th:href="@{../../style.css}">
+<link rel="stylesheet" href="../static/style.css" th:href="@{style.css}">
 <!--=======================***********************====================================-->
 <!--=========NAG?ÓWEK NAG?ÓWEK  ==================================================-->
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">SUPPLIER  Management System</a>
+<!-- @@@@@@@@@@@   HEADER SECTION   @@@@@@@@@@@ -->
+<header th:replace="fragments :: header">
+   
+</header>
 
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/assessment}">SUPPLIER Assessment</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/complaints_mgm}">COMPLAINTS Management</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<!-- @@@@@@@@@@@  -/- HEADER SECTION   @@@@@@@@@@@ -->
 <!--===================================================================================-->
 <div class="container text-center">
+    <div><p><a class="link1 text-center text-uppercase text-white " href="/suppliers" type="button">Go Back to Suppliers Page</a></p>
+    </div>
 <!--    ten zapis jest ok jedynie zmienna [[${supplierName2}]] jest NOK w sensie ?e nie o te zminna potrzbuje z Controllera-->
-    <div><br><br>
+    <div style="margin-top: 150px;"><br><br>
         <h1> List &nbsp&nbsp  Components &nbsp&nbsp   for &nbsp&nbsp supplier: &nbsp&nbsp   [[${supplierName2}]]</h1>
         <br><br>
     </div>

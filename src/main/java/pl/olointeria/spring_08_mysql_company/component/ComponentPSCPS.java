@@ -5,7 +5,7 @@ import pl.olointeria.spring_08_mysql_company.prima.Supplier;
 import javax.persistence.*;
 
 @Entity
-public class Component {
+public class ComponentPSCPS {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -31,9 +31,9 @@ public class Component {
 //    private Supplier supplier;
 
 
-    public Component(){};
+    public ComponentPSCPS(){}
 
-    public Component(Long id, String sapName, String sapNumber, String id_Sap, String customer, Long ppm, Long certificate, Long approval, String auditResult, String pscr, String location, String deliveryDeley, String interference, String collaboration, Long averageScore, String primaPlant) {
+    public ComponentPSCPS(Long id, String sapName, String sapNumber, String id_Sap, String customer, Long ppm, Long certificate, Long approval, String auditResult, String pscr, String location, String deliveryDeley, String interference, String collaboration, Long averageScore, String primaPlant) {
         this.id = id;
         this.sapName = sapName;
         this.sapNumber = sapNumber;

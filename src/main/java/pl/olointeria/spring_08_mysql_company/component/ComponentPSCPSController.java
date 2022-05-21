@@ -17,17 +17,17 @@ import java.util.Collections;
 import java.util.List;
 
 @Controller
-public class ComponentController {
+public class ComponentPSCPSController {
 
     @Autowired
-    private ComponentRepository componentRepo;
+    private ComponentPSCPSRepository componentRepo;
     @Autowired
     private SupplierRepository supplierRepository;
 
-    @GetMapping("/components/new")
+    @GetMapping("/componentsPSCPS/new")
     public  String showProductsForm(Model model){
         List<Supplier> listSuppliers = supplierRepository.findAll();
-        model.addAttribute("product", new Component());
+        model.addAttribute("product", new ComponentPSCPS());
        model.addAttribute("listSuppliers", listSuppliers);
         return "product_form";
     }
@@ -49,9 +49,9 @@ public class ComponentController {
 //
 //        return "redirect:/components";
 //    }
-    @GetMapping("/components")
+    @GetMapping("/componentsPSCPS")
     public  String showListComponents(Model model){
-        List<Component> listComponents =componentRepo.findAll();
+        List<ComponentPSCPS> listComponents =componentRepo.findAll();
 
         model.addAttribute("listComponents", listComponents);
         return "components";
